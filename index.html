@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>test</title>
+<meta charset="utf-8">
+<meta name="robots" content="all">
+<meta name="Keywords" content="">
+<meta name="Description" content="Web Publisher Portfolio">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="https:code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Monda:400,700">
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+<script>
+function draw() {
+    var ctx = document.getElementById('canvas').getContext('2d');
+
+    ctx.beginPath();
+    ctx.moveTo(0, 154);
+    ctx.lineTo(8, 154);
+    ctx.lineTo(29, 125);
+    ctx.lineTo(28, 118);
+    ctx.lineTo(44, 103);
+    ctx.lineTo(74, 87);
+    ctx.lineTo(77, 74);
+    ctx.lineTo(42, 92);
+    ctx.lineTo(23, 118);
+    ctx.lineTo(23, 125);
+    ctx.lineTo(0, 154);
+    ctx.fillStyle = '#ffffff';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(0, 154);
+    ctx.lineTo(10, 154);
+    ctx.lineTo(13, 158);
+    ctx.lineTo(13, 160);
+    ctx.lineTo(10, 168);
+    ctx.lineTo(5, 162);
+    ctx.lineTo(0, 162);
+    ctx.lineTo(0, 154);
+    ctx.fillStyle = '#646464';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(10, 168);
+    ctx.lineTo(13, 172);
+    ctx.lineTo(18, 171);
+    ctx.lineTo(23, 168);
+    ctx.lineTo(31, 160);
+    ctx.lineTo(32, 158);
+    ctx.lineTo(29, 158);
+    ctx.lineTo(20, 167);
+    ctx.lineTo(15, 167);
+    ctx.lineTo(13, 160);
+    ctx.lineTo(10, 168);
+    ctx.fillStyle = '#d9d9d9';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(32, 158);
+    ctx.lineTo(34, 172);
+    ctx.lineTo(18, 171);
+    ctx.lineTo(23, 168);
+    ctx.lineTo(31, 160);
+    ctx.lineTo(32, 158);
+    ctx.fillStyle = '#f8f4f3';
+    ctx.fill();
+}
+
+</script>
+</head>
+<body onload="draw();">
+    <canvas id="canvas" width="525" height="295" style="padding-left: 100px; background:white;"></canvas>
+</body>
+</html>
+
+
