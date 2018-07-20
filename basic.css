@@ -1,0 +1,107 @@
+@charset 'utf-8';
+@import 'common.css';
+
+/* reset */
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #111;
+	font-size: 15px;
+	font-family: "source-han-sans-korean", "Monda", sans-serif;
+	line-height: 2;
+}
+
+
+/* basic layout */
+.site-container {margin-bottom: 300px}
+
+.site-contents{position: relative; min-height: 100vh; padding: 15vh 100px; background: #fff; box-sizing: border-box}
+
+.site-footer{position: fixed; bottom: 0; width: 100%; font-family: "Monda"; text-align: center; z-index: -1;}
+.site-footer a{color: #fff}
+.site-footer h2{padding-bottom: 15px; font-size: 24px; font-weight:300}
+.site-footer .inner{padding:50px 0; color: #fff; background: #333}
+.site-footer .copy{padding: 15px 0; color: gray; background: #252525}
+
+/* main*/
+.site-contents.main{position: relative; text-align: center; background: url(../img/bg_main.jpg) no-repeat left bottom; background-size: cover}
+.site-contents.main h2{color: #fff; font-size: 64px; font-family: "Monda"}
+.site-contents.main span.main-summary{color: #fff; font-size: 25px}
+.site-contents.main p{color: #fff}
+.site-contents.main .scroll{display: block; overflow: hidden; position: absolute; left: 50%; bottom: 0; width: 100px; margin-left: -50px; padding-bottom: 60px; color: #fff; text-align: center; letter-spacing: 0.07em; box-sizing: border-box}
+.site-contents.main .scroll:before{position: absolute; left: 50%; top: 40px; width: 1px; height: 0; background: #fff; content: ''; opacity: 1; animation-name:arrow; animation-duration:2s; animation-iteration-count:infinite;
+}
+@keyframes arrow {
+	0% {height: 0; opacity: 0}
+	100% {height: 50px; opacity: 1}
+}
+
+/* introduce */
+.site-contents.intro{display: table; width: 100%; padding: 0; border-spacing:0; table-layout: fixed}
+.site-contents.intro h2{font-size: 64px; font-family: "Monda"}
+.site-contents.intro h2 span {display: block; position: relative; color: #fff; font-size: 20px}
+.site-contents.intro h2 span:after{position: absolute; left: 0; bottom: -10px; width:80px; height:2px; background: #fff; opacity:0.5; content: ''}
+.site-contents.intro h2 em.spin{display: inline-block; transform: rotate(0deg); animation-name:spin; animation-duration:1s;}
+.site-contents.intro .about{display: table-cell; width: 50%; color: #fff; text-align: right; background: #cf6952}
+.site-contents.intro .about h2 span:after{left: auto; right: 0}
+.site-contents.intro .about p{margin-bottom: 2em}
+.site-contents.intro .about .about__text {max-width: 35em; margin-left: auto}
+.site-contents.intro .skills{display: table-cell; width: 50%; color: #fff; background: #b34127}
+.site-contents.intro .skills dt, .site-contents.intro .skills dd:last-child{padding-bottom: 1em}
+.site-contents.intro .skills dd:before{padding-right: 5px; content: '-'}
+@keyframes spin {
+	0% {transform: rotate(0deg)}
+	100% {transform: rotate(360deg)}
+}
+
+/* works */
+.site-contents.works {box-sizing: content-box}
+.site-contents.works h2{padding-bottom: 50px; font-size: 64px; line-height: 1.2; font-family: "Monda"; text-align: center}
+.site-contents.works ul.works__list{max-width: 1400px; margin: auto}
+.site-contents.works ul.works__list:after{display: block; clear: both; content: ''}
+.site-contents.works li.works__list-item{float: left; width: 50%; padding: 30px 15px; box-sizing: border-box}
+.site-contents.works a.works__link{display: block; max-width: 640px; margin: 0 auto}
+.site-contents.works a.works__link:hover figure.works__figure img{opacity: 0.3; transform: scale(1.1)}
+.site-contents.works a.works__link:hover figure.works__figure figcaption {top: 10%; bottom: 10%; border: 1px solid #fff; border-width: 1px 1px 0}
+.site-contents.works a.works__link:hover figure.works__figure .summary{transform: translateY(50%)}
+.site-contents.works a.works__link:hover figure.works__figure .summary h3:before{display: block; position: absolute; bottom: 50%; left: -100%; width:100%; border-bottom: 1px solid #fff; content: ''}
+.site-contents.works a.works__link:hover figure.works__figure .summary h3:after{display: block; position: absolute; bottom: 50%; right: -100%; width:100%; border-bottom: 1px solid #fff; content: ''}
+.site-contents.works a.works__link:hover figure.works__figure .etc{transition-delay: 0.4s; opacity: 1}
+.site-contents.works figure.works__figure{position: relative; background: #000; overflow: hidden}
+.site-contents.works figure.works__figure > *{transition: all 0.5s}
+.site-contents.works figure.works__figure img{opacity: 0.7}
+.site-contents.works figure.works__figure figcaption{position: absolute; top: 45%; left: 7%; bottom: 45%; right: 7%; text-align: center}
+.site-contents.works figure.works__figure .summary{position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; overflow: hidden}
+.site-contents.works figure.works__figure .summary h3{display: table; position: relative; margin: 0 auto; padding: 0 10px; color: #fff; font-size: 28px}
+.site-contents.works figure.works__figure .etc{color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0}
+.site-contents.works figure.works__figure .etc dl{font-size: 20px}
+
+
+@media screen and (max-width: 1439px){
+.site-contents.intro h2{padding-bottom: 20px; font-size: 36px}
+}
+
+@media screen and (max-width: 959px){
+.site-container{min-width: 320px; margin-bottom: 0}
+.site-contents{padding: 100px 5vw}
+.site-footer{position:static; bottom:auto; z-index:initial}
+
+.site-contents.main h2{color: #fff; font-size: 32px; font-family: "Monda"}
+.site-contents.main span.main-summary{display: block; padding-bottom: 20px; color: #fff; font-size: 20px}
+.site-contents.main p{padding-bottom: 10px}
+
+.site-contents.intro h2{padding-bottom: 20px; font-size: 38px}
+.site-contents.intro h2 span:before{position: absolute; left: 50%; bottom: -10px; width:80px; height:2px; margin-left: -40px; background: #fff; opacity:0.5; content: ''}
+.site-contents.intro h2 span:after{visibility: hidden}
+.site-contents.intro .about{display: block; width: 100%; text-align: center;}
+.site-contents.intro .about .about__text {margin-right: auto}
+.site-contents.intro .skills{display: block; width:100%; text-align: center;}
+.site-contents.intro .skills dt{font-size: 20px}
+
+.site-contents.works h2{font-size: 38px}
+.site-contents.works li.works__list-item{width: 100%}
+.site-contents.works figure.works__figure .summary h3{font-size: 18px}
+.site-contents.works figure.works__figure .etc dl{font-size: 15px}
+}
