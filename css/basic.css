@@ -44,11 +44,11 @@ html,body {
 .site-contents.intro h2 span {display: block; position: relative; color: #fff; font-size: 20px}
 .site-contents.intro h2 span:after{position: absolute; left: 0; bottom: -10px; width:80px; height:2px; background: #fff; opacity:0.5; content: ''}
 .site-contents.intro h2 em.spin{display: inline-block; transform: rotate(0deg); animation-name:spin; animation-duration:1s;}
-.site-contents.intro .about{display: table-cell; width: 50%; color: #fff; text-align: right; background: #e68a71}
+.site-contents.intro .about{display: table-cell; width: 50%; color: #fff; text-align: right; background: #cf6952}
 .site-contents.intro .about h2 span:after{left: auto; right: 0}
 .site-contents.intro .about p{margin-bottom: 2em}
 .site-contents.intro .about .about__text {max-width: 35em; margin-left: auto}
-.site-contents.intro .skills{display: table-cell; width: 50%; color: #fff; background: #cf6952}
+.site-contents.intro .skills{display: table-cell; width: 50%; color: #fff; background: #b34127}
 .site-contents.intro .skills dt, .site-contents.intro .skills dd:last-child{padding-bottom: 1em}
 .site-contents.intro .skills dd:before{padding-right: 5px; content: '-'}
 @keyframes spin {
